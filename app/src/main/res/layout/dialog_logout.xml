@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_14sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_logout_img" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgLogout"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:scaleType="fitXY"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/logout_img" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCancel"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_12sdp"
+                        android:src="@drawable/close_icon" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/gelion_bold"
+                android:includeFontPadding="false"
+                android:text="Logout?"
+                android:textColor="@color/darkBlue"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="center"
+                android:text="Are you sure you would like to \nlogout?"
+                android:textColor="@color/black"
+                android:alpha="0.7"
+                android:textSize="@dimen/_16ssp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_btn_shape"
+                android:fontFamily="@font/gelion_regular"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Logout"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingHorizontal="@dimen/_60sdp"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_14sdp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCancel"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="end"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/close_icon" />
+
+        <LinearLayout
+            android:id="@+id/llScanQR"
+            android:layout_width="@dimen/_192sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_btn_shape"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgScanQrDialog"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_11sdp"
+                android:src="@drawable/img_scan_qr"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gelion_regular"
+                android:paddingStart="0dp"
+                android:text="Scan QR"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llManually"
+            android:layout_width="@dimen/_192sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/bg_shape"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgManually"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_11sdp"
+                android:src="@drawable/img_manually" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtManually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gelion_regular"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/_82sdp"
+                android:text="Manually"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEnterSerialNumber"
+            android:layout_width="@dimen/_192sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/bg_shape"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSerialNumber"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:padding="@dimen/_11sdp"
+                android:src="@drawable/img_manually" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gelion_regular"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="Enter Serial Number"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+

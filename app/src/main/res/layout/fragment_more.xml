@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MoreFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?android:attr/actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/back_arrow"
+            android:padding="@dimen/_6sdp"
+            app:tint="@color/darkBlue"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textColor="@color/darkBlue"
+            android:fontFamily="@font/gelion_bold"
+            android:textSize="@dimen/_20ssp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/llMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/bg_shape_more"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_2sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_11sdp"
+            android:src="@drawable/img_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMyProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gelion_regular"
+            android:text="My Profile"
+            android:textColor="@color/darkAndLight"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/llMyProfile"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/bg_shape_more"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_2sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHistory"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_11sdp"
+            android:src="@drawable/img_history" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gelion_regular"
+            android:text="History"
+            android:textColor="@color/darkAndLight"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/llHistory"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/bg_shape_more"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_2sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHelp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_11sdp"
+            app:tint="@color/darkAndLight"
+            android:src="@drawable/img_help" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gelion_regular"
+            android:text="Help"
+            android:textColor="@color/darkAndLight"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/llHelp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/bg_shape_more"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_2sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLogout"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_11sdp"
+            app:tint="@color/darkAndLight"
+            android:src="@drawable/img_log_out" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gelion_regular"
+            android:text="Logout"
+            android:textColor="@color/darkAndLight"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

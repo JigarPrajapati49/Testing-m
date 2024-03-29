@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MoreFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/bg_img_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:attr/actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/back_arrow"
+                android:padding="@dimen/_6sdp"
+                app:tint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gelion_bold"
+                android:textSize="@dimen/_20ssp"/>
+
+            <LinearLayout
+                android:id="@+id/llLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgLogOut"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/img_log_out"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LogOut"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gelion_regular"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgHelp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/img_help"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gelion_regular"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardProfile"
+            android:layout_width="@dimen/_66sdp"
+            android:layout_height="@dimen/_66sdp"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtUserName">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_complete" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="-10dp"
+            android:adjustViewBounds="true"
+            android:elevation="@dimen/_2sdp"
+            android:src="@drawable/img_add"
+            app:layout_constraintBottom_toBottomOf="@id/cardProfile"
+            app:layout_constraintEnd_toEndOf="@id/cardProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:singleLine="true"
+            android:text="Kathryn Murphy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_26sdp"
+        app:hintEnabled="false"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/Rounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:hint="Enter email address"
+            android:fontFamily="@font/gelion_regular"
+            android:inputType="text"
+            android:paddingVertical="@dimen/_16sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPhoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        app:hintEnabled="false"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmailId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/Rounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:hint="Enter phone number"
+            android:fontFamily="@font/gelion_regular"
+            android:inputType="text"
+            android:paddingVertical="@dimen/_16sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        app:hintEnabled="false"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/Rounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:hint="Enter Password"
+            android:fontFamily="@font/gelion_regular"
+            android:inputType="text"
+            android:paddingVertical="@dimen/_16sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_btn_shape"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_18ssp"
+        android:fontFamily="@font/gelion_regular"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

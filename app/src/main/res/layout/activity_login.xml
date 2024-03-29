@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Sign In"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:textColor="@color/darkBlue"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:fontFamily="@font/gelion_bold"
+        android:textSize="@dimen/_26ssp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/txtSignIn"
+        app:layout_constraintEnd_toEndOf="@+id/txtSignIn"
+        app:layout_constraintTop_toBottomOf="@id/txtSignIn"
+        android:text="Please sign in to continue"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/black"
+        android:alpha="0.6"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/gelion_regular"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHintNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/txtContinue"
+        app:layout_constraintEnd_toEndOf="@+id/txtContinue"
+        app:layout_constraintTop_toBottomOf="@id/txtContinue"
+        android:text="Email OR Mobile Number"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/black"
+        android:alpha="0.6"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:fontFamily="@font/gelion_regular"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMobileNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/txtHintNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtHintNumber"
+        app:layout_constraintStart_toStartOf="@+id/txtHintNumber"
+        app:shapeAppearance="@style/Rounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailOrNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:hint="+99 00000 00000"
+            android:fontFamily="@font/gelion_regular"
+            android:inputType="text"
+            android:paddingVertical="@dimen/_16sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHintPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tilMobileNumber"
+        app:layout_constraintEnd_toEndOf="@+id/tilMobileNumber"
+        app:layout_constraintTop_toBottomOf="@id/tilMobileNumber"
+        android:text="Password"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/black"
+        android:alpha="0.6"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/gelion_regular"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/txtHintPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtHintPassword"
+        app:layout_constraintStart_toStartOf="@+id/txtHintPassword"
+        app:shapeAppearance="@style/Rounded">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/gelion_regular"
+            android:inputType="textPassword"
+            android:hint="********"
+            android:paddingVertical="@dimen/_16sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtResetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/txtHintPassword"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        android:text="Reset Password?"
+        android:textSize="@dimen/_16ssp"
+        android:visibility="gone"
+        android:gravity="end"
+        android:textColor="@color/darkBlue"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/gelion_regular"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_btn_shape"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_18ssp"
+        android:fontFamily="@font/gelion_regular"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@+id/llSignUp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+    <LinearLayout
+        android:id="@+id/llSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtDontHaveAccout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? "
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black"
+            android:alpha="0.6"
+            android:fontFamily="@font/gelion_regular"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/darkCloud"
+            android:fontFamily="@font/gelion_bold"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

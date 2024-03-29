@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgShape"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:foregroundGravity="left"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingStart="0dp"
+        android:src="@drawable/img_half_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/gelion_regular"
+        android:gravity="start"
+        android:text="12 March"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@id/imgShape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgShape"
+        app:layout_constraintTop_toTopOf="@id/imgShape" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/img_user"
+                    tools:ignore="NestedWeights" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCustomer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/gelion_regular"
+                    android:gravity="center_vertical|start"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="0dp"
+                    android:singleLine="true"
+                    android:text="Customer Name"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_14ssp"
+                    tools:ignore="NestedWeights" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/img_ticket"
+                    tools:ignore="NestedWeights" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTicket"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/gelion_regular"
+                    android:gravity="center_vertical|start"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:singleLine="true"
+                    android:text="Ticket Number"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/img_user"
+                    android:visibility="invisible"
+                    tools:ignore="NestedWeights" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/gelion_regular"
+                    android:gravity="center_vertical|start"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="0dp"
+                    android:singleLine="true"
+                    android:text="Mahesh Kumar"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCall"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/img_call_icon"
+                    tools:ignore="NestedWeights" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTicketNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:layout_weight="8"
+                    android:fontFamily="@font/gelion_regular"
+                    android:gravity="center_vertical|center"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:singleLine="true"
+                    android:text="#123456789"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgModel"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/img_model"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llHint" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMachine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:gravity="center_vertical|start"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:singleLine="true"
+            android:text="Machine Name"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/imgModel"
+            app:layout_constraintEnd_toStartOf="@id/btnNew"
+            app:layout_constraintStart_toEndOf="@id/imgModel"
+            app:layout_constraintTop_toTopOf="@id/imgModel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMachineName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:gravity="center_vertical|start"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/_6sdp"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="Hydraulic Shearing"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@id/txtMachine"
+            app:layout_constraintStart_toStartOf="@id/txtMachine"
+            app:layout_constraintTop_toBottomOf="@id/txtMachine" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNew"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:background="@drawable/bg_btn_shape"
+            android:fontFamily="@font/gelion_regular"
+            android:includeFontPadding="false"
+            android:text="New"
+            android:backgroundTint="@color/green"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/txtMachineName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtMachine" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

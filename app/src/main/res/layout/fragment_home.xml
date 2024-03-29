@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Hi, Mahesh"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:textColor="@color/darkBlue"
+        android:fontFamily="@font/gelion_bold"
+        android:textSize="@dimen/_26ssp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgNotification"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/img_notification"
+        app:layout_constraintTop_toTopOf="@id/imgScanQr"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imgScanQr"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgScanQr"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:src="@drawable/img_scan"
+        android:focusable="true"
+        android:visibility="gone"
+        android:foregroundTint="@color/gray"
+        app:layout_constraintTop_toTopOf="@id/txtUserName"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toStartOf="@id/imgNotification"
+        app:layout_constraintBottom_toBottomOf="@id/txtUserName"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llInvert"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_home_screen_shape">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgInvert"
+                android:layout_width="@dimen/_80sdp"
+                android:src="@drawable/img_invert"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingBottom="0dp"
+                android:layout_height="@dimen/_60sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invert"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/gelion_regular"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/llBook"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/bg_home_screen_shape">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBook"
+                android:layout_width="@dimen/_80sdp"
+                android:src="@drawable/img_book"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingBottom="0dp"
+                android:layout_height="@dimen/_60sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/gelion_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDispatch"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/bg_home_screen_shape">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDispatch"
+                android:layout_width="@dimen/_80sdp"
+                android:src="@drawable/img_dispatch"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingBottom="0dp"
+                android:layout_height="@dimen/_60sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispatch"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/gelion_regular"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

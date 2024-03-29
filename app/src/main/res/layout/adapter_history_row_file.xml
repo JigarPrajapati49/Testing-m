@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@drawable/bg_shape"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgUser"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/img_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHintName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:gravity="center_vertical|start"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:singleLine="true"
+            android:text="Your Name"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/imgUser"
+            app:layout_constraintEnd_toStartOf="@id/btnComplete"
+            app:layout_constraintStart_toEndOf="@id/imgUser"
+            app:layout_constraintTop_toTopOf="@id/imgUser" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:gravity="center_vertical|start"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/_6sdp"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="Hydraulic Shearing"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@id/txtHintName"
+            app:layout_constraintStart_toStartOf="@id/txtHintName"
+            app:layout_constraintTop_toBottomOf="@id/txtHintName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_btn_shape"
+            android:fontFamily="@font/gelion_regular"
+            android:includeFontPadding="false"
+            android:text="Complete"
+            android:backgroundTint="@color/green"
+            android:textAllCaps="false"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtHintName" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgModel"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/img_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtName"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHintModelName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:gravity="center_vertical|start"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:singleLine="true"
+            android:text="Model Name"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/imgModel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgModel"
+            app:layout_constraintTop_toTopOf="@id/imgModel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtModelName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gelion_regular"
+            android:gravity="center_vertical|start"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/_6sdp"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:text="Hydraulic Shearing"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@id/txtHintModelName"
+            app:layout_constraintStart_toStartOf="@id/txtHintModelName"
+            app:layout_constraintTop_toBottomOf="@id/txtHintModelName" />
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

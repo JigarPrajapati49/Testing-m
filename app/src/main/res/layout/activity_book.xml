@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BookActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?android:attr/actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/back_arrow"
+            android:padding="@dimen/_6sdp"
+            app:tint="@color/darkBlue"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textColor="@color/darkBlue"
+            android:fontFamily="@font/gelion_bold"
+            android:textSize="@dimen/_20ssp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMachineNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Customer Name"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSuplierCompanyNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilMachineNumber"
+                app:layout_constraintEnd_toEndOf="@+id/tilMachineNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tilMachineNumber"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Mobile Number"
+                    android:maxLength="10"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="number"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPiNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilSuplierCompanyNo"
+                app:layout_constraintEnd_toEndOf="@+id/tilSuplierCompanyNo"
+                app:layout_constraintTop_toBottomOf="@+id/tilSuplierCompanyNo"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPiNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="PI number"
+                    android:maxLength="10"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDifNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilPiNumber"
+                app:layout_constraintEnd_toEndOf="@+id/tilPiNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tilPiNumber"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDifNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="DIF number"
+                    android:maxLength="10"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/invertDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilDifNumber"
+                app:layout_constraintEnd_toEndOf="@+id/tilDifNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tilDifNumber"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTaxInvoiceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Tax Invoice Number"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLrNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/invertDate"
+                app:layout_constraintEnd_toEndOf="@+id/invertDate"
+                app:layout_constraintTop_toBottomOf="@+id/invertDate"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtLrNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="LR Number"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilLrNumber"
+                app:layout_constraintEnd_toEndOf="@+id/tilLrNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tilLrNumber"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Address"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSelectPersonName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tilAddress"
+                app:layout_constraintEnd_toEndOf="@id/tilAddress"
+                app:layout_constraintTop_toBottomOf="@id/tilAddress"
+                android:text="Select Sales Person Name"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="@color/darkBlue"
+                android:fontFamily="@font/gelion_regular"
+                android:textSize="@dimen/_14ssp"/>
+
+            <Spinner
+                style="@style/Spinner"
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/bg_spinner"
+                app:layout_constraintStart_toStartOf="@+id/tilAddress"
+                app:layout_constraintEnd_toEndOf="@+id/tilAddress"
+                app:layout_constraintTop_toBottomOf="@+id/txtSelectPersonName"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAttachedImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/spinner"
+                app:layout_constraintEnd_toEndOf="@id/spinner"
+                app:layout_constraintTop_toBottomOf="@id/spinner"
+                android:text="Attached image"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/darkBlue"
+                android:fontFamily="@font/gelion_regular"
+                android:textSize="@dimen/_20ssp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageAttach"
+                android:layout_width="@dimen/_66sdp"
+                android:layout_height="@dimen/_66sdp"
+                app:layout_constraintStart_toStartOf="@id/txtAttachedImage"
+                app:layout_constraintTop_toBottomOf="@id/txtAttachedImage"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/img_attach_photo"
+                android:padding="@dimen/_6sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/imageAttach"
+                app:layout_constraintBottom_toBottomOf="@id/imageAttach"
+                app:layout_constraintStart_toEndOf="@id/imageAttach"
+                app:layout_constraintEnd_toEndOf="@id/spinner"
+                android:orientation="horizontal"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/adapter_image_row_file"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn_shape"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/gelion_regular"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/imageAttach"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

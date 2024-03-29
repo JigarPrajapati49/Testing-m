@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RaiseComplaintActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?android:attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/back_arrow"
+            app:tint="@color/darkBlue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:fontFamily="@font/gelion_bold"
+            android:text="Raise complaint"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_20ssp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- card view for user details-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardUserDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:backgroundTint="@color/lightCloud"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:adjustViewBounds="true"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/img_user" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtCustomerName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/gelion_regular"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/_6sdp"
+                            android:singleLine="true"
+                            android:text="Mahesh Kumar"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18ssp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/gelion_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/_4sdp"
+                        android:paddingEnd="@dimen/_4sdp"
+                        android:singleLine="true"
+                        android:text="Elgin St. Celina, Delaware 10299"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPurchaseDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/gelion_regular"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/_4sdp"
+                        android:paddingEnd="@dimen/_4sdp"
+                        android:singleLine="true"
+                        android:text="Purchased Date: 15 May 2022"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/cardUserDetail"
+                app:layout_constraintStart_toStartOf="@+id/cardUserDetail"
+                app:layout_constraintTop_toBottomOf="@id/cardUserDetail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Machine details"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMachineDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Hydraulic Shearing"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toEndOf="@id/txtDetail"
+                app:layout_constraintStart_toStartOf="@id/txtDetail"
+                app:layout_constraintTop_toBottomOf="@id/txtDetail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtWarrantyEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@color/lightOrange"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/_6sdp"
+                android:singleLine="true"
+                android:text="Warranty valid till : 17 Aug 2023"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtMachineDetail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProblemDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Problem description"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtWarrantyEnd" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/txtProblemDescription"
+                app:layout_constraintStart_toStartOf="@+id/txtProblemDescription"
+                app:layout_constraintTop_toBottomOf="@+id/txtProblemDescription"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:fontFamily="@font/gelion_regular"
+                    android:gravity="start"
+                    android:hint="Enter description"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkGray"
+                    android:textSize="@dimen/_14ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/tilDescription"
+                app:layout_constraintStart_toStartOf="@+id/tilDescription"
+                app:layout_constraintTop_toBottomOf="@id/tilDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAttachedImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Attached image"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toEndOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="@+id/view1"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="@dimen/_66sdp"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/img_attach_photo"
+                app:layout_constraintStart_toStartOf="@id/txtAttachedImage"
+                app:layout_constraintTop_toBottomOf="@id/txtAttachedImage" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/imgAdd"
+                app:layout_constraintBottom_toBottomOf="@id/imgAdd"
+                app:layout_constraintStart_toEndOf="@id/imgAdd"
+                app:layout_constraintEnd_toEndOf="@id/txtAttachedImage"
+                android:orientation="horizontal"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/adapter_image_row_file"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_btn_shape"
+                android:fontFamily="@font/gelion_regular"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgAdd" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InvertActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?android:attr/actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/back_arrow"
+            android:padding="@dimen/_6sdp"
+            app:tint="@color/darkBlue"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invert"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textColor="@color/darkBlue"
+            android:fontFamily="@font/gelion_bold"
+            android:textSize="@dimen/_20ssp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMachineNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMachineNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Machine no."
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSuplierCompanyNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilMachineNumber"
+                app:layout_constraintEnd_toEndOf="@+id/tilMachineNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tilMachineNumber"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSupCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Supplier company name"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSuplierSerialNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/tilSuplierCompanyNo"
+                app:layout_constraintEnd_toEndOf="@+id/tilSuplierCompanyNo"
+                app:layout_constraintTop_toBottomOf="@+id/tilSuplierCompanyNo"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSupSerialNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:hint="Supplier serial number"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/invertDate"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_edt"
+                app:layout_constraintStart_toStartOf="@+id/tilSuplierSerialNumber"
+                app:layout_constraintEnd_toEndOf="@+id/tilSuplierSerialNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tilSuplierSerialNumber"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/img_invert_date"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:padding="7dp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text=""
+                    android:textSize="@dimen/_14ssp"
+                    android:textAlignment="viewStart"/>
+
+            </LinearLayout>
+
+            <!--
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/invertDate"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:hintEnabled="false"
+                    app:layout_constraintStart_toStartOf="@+id/tilSuplierCompanyNo"
+                    app:layout_constraintEnd_toEndOf="@+id/tilSuplierCompanyNo"
+                    app:layout_constraintTop_toBottomOf="@+id/tilSuplierCompanyNo"
+                    app:shapeAppearance="@style/Rounded">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/edtInvertDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:hint="Invert date"
+                        android:fontFamily="@font/gelion_regular"
+                        android:inputType="text"
+                        android:paddingVertical="@dimen/_16sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/invertDate"
+                app:layout_constraintEnd_toEndOf="@+id/invertDate"
+                app:layout_constraintTop_toBottomOf="@+id/invertDate"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:gravity="top"
+                    android:hint="Description"
+                    android:fontFamily="@font/gelion_regular"
+                    android:inputType="textMultiLine"
+                    android:paddingVertical="@dimen/_16sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAttachedImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tilDescription"
+                app:layout_constraintEnd_toEndOf="@id/tilDescription"
+                app:layout_constraintTop_toBottomOf="@id/tilDescription"
+                android:text="Attached image"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/darkBlue"
+                android:fontFamily="@font/gelion_regular"
+                android:textSize="@dimen/_20ssp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="@dimen/_66sdp"
+                android:layout_height="@dimen/_66sdp"
+                app:layout_constraintStart_toStartOf="@id/txtAttachedImage"
+                app:layout_constraintTop_toBottomOf="@id/txtAttachedImage"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/img_attach_photo"
+                android:padding="@dimen/_6sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/imgAdd"
+                app:layout_constraintBottom_toBottomOf="@id/imgAdd"
+                app:layout_constraintStart_toEndOf="@id/imgAdd"
+                app:layout_constraintEnd_toEndOf="@id/tilDescription"
+                android:orientation="horizontal"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/adapter_image_row_file"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_btn_shape"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/gelion_regular"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/imgAdd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
